@@ -1,0 +1,56 @@
+.emails {
+    display: grid;
+    align-items: center;
+    border-top: 1px solid rgb(204 204 204 / 38%);
+    grid-template-columns: 280px auto auto;
+    justify-content: space-between;
+    padding-right: 10px;
+    
+}
+.emails:hover {
+    box-shadow: 2px 2px 3px #ccc;
+    border-left: 1px solid rgb(204 204 204 / 38%);
+    cursor: pointer;
+}
+.emails__left svg {
+    font-size: 20px;
+    color: lightgray;
+}
+.emails__left .MuiButtonBase-root {
+    padding: 7px;
+}
+.emails__left span {
+    font-weight: 500;
+}
+.emails__left {
+    margin-right: 20px;
+}
+.emails__middle {
+    max-width: 600px;
+}
+.emails__middle p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+.emails__middle p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.emails__middle p span {
+    font-weight: normal;
+}
+.emails__right .time {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.emails:hover .emails__left svg {
+    color:gray;
+}

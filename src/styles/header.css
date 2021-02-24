@@ -1,0 +1,52 @@
+.header {
+    display: grid;
+    grid-template-columns: 256px auto 150px;
+    align-items: center;
+    border-bottom: 1px solid hsl(0deg 0% 89% / 55%);
+    padding-bottom: 5px;
+    padding: 7px 0px;
+}
+.logo__wrapper .MuiSvgIcon-root {
+    margin-right: 0px;
+    margin-left: 15px;
+}
+.search__wrapper {
+    background: #f1f3f4;
+    display: grid;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 5px;
+    max-width: 650px;
+    grid-template-columns: 50px auto 40px;
+    margin-right: 30px;
+}
+.search__wrapper input {
+    border: 0;
+    height: 45px;
+    background: transparent;
+    outline: 0;
+    font-size: 16px;
+}
+.logo__wrapper {
+    display: flex;
+    align-items: center;
+}
+.icon__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 50px;
+}
+.MuiAvatar-root.MuiAvatar-circle {
+    width: 30px;
+    height: 30px;
+}
+.header svg {
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.2s ease 0s;
+}
+.header svg:hover {
+    background: rgba(60,64,67,0.08);
+    border-radius: 50%;
+}

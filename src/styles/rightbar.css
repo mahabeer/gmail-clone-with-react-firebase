@@ -1,0 +1,44 @@
+.rightbar {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #eee;
+}
+
+.rightbar img {
+    display: flex;
+    width: 21px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.1 s linear 0s;
+}
+
+.rightbar img:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.top_icons {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    flex: 1;
+}
+.middle_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex: 1;
+}
+.bottom_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex: 1;
+}

@@ -1,0 +1,31 @@
+.mail_body_tabs {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    align-items: center;
+}
+.mail_body_tabs .tabs_inner {
+    padding: 15px 10px;
+    margin: 0px 10px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 35px auto;
+    font-weight: bold;
+    font-size: 14px;
+    color: gray;
+    transition: all 0.1s linear 0s;
+}
+.mail_body_tabs .active_tab {
+    border-bottom: 3px solid #d93025;
+    color: #d93025;
+    
+}
+.mail_body_tabs .tabs_inner:hover {
+    background: #f1f3f4;
+    cursor: pointer;
+}
+.mail_body_tabs .tabs_inner svg {
+    font-size: 20px;
+}
+.mail_body_tabs span {
+    line-height: 0;
+}
