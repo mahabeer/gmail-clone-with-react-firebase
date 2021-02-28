@@ -5,13 +5,15 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-
-function Mail_body_header() {
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useHistory } from 'react-router-dom';
+function MessageHeader() {
+    const history = useHistory();
     return (
         <div className="mail_body_header">
             <div className="left_icon">
                 <div class="check_box">
-                <CheckBoxOutlineBlankIcon/>
+                <ArrowBackIcon onClick={e=>history.push('/')}/>
                 <ArrowDropDownIcon/>
                 </div>
                 <RefreshIcon/>
@@ -27,4 +29,4 @@ function Mail_body_header() {
     )
 }
 
-export default Mail_body_header
+export default MessageHeader

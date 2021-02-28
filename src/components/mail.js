@@ -4,7 +4,7 @@ import Email from './Email'
 import Mail_body_header from './mail_body_header'
 import Mail_body_tabs from './mail_body_tabs'
 
-function mail() {
+function Mail() {
     return (
         <div className="mailbody">
             <Mail_body_header/>
@@ -18,4 +18,4 @@ function mail() {
     )
 }
 
-export default mail
+export default Mail

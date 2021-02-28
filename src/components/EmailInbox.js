@@ -5,9 +5,11 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import "../styles/email.css"
 import { IconButton } from '@material-ui/core';
-function EmailInbox({username,subject,time}) {
+import { Link } from 'react-router-dom';
+function EmailInbox({id,username,subject,time}) {
     return (
-        <div>
+    <Link to={`/message/${id}`}>
+        <div id={id} key={id}>
             <div className="emails">
             <div className="emails__left">
                 <IconButton>
@@ -31,6 +33,7 @@ function EmailInbox({username,subject,time}) {
             </div>         
         </div>
         </div>
+    </Link>
     )
 }
 

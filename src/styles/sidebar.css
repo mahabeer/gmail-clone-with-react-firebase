@@ -45,6 +45,7 @@
     align-items: center;
     border-radius: 0px 15px 15px 0px;
     padding: 6px 20px;
+    text-decoration: none;
 }
 .categories span {
     margin-left: 15px;

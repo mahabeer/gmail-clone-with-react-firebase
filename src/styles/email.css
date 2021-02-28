@@ -1,9 +1,8 @@
 .emails {
-    display: grid;
+    display: flex;
     align-items: center;
     border-top: 1px solid rgb(204 204 204 / 38%);
     grid-template-columns: 280px auto auto;
-    justify-content: space-between;
     padding-right: 10px;
     
 }
@@ -21,12 +20,17 @@
 }
 .emails__left span {
     font-weight: 500;
+    
 }
 .emails__left {
     margin-right: 20px;
+    display: flex;
+    align-items: center;
+    min-width: 260px;
 }
 .emails__middle {
-    max-width: 600px;
+    display: flex;
+    flex: 1;
 }
 .emails__middle p {
     margin: 0;
@@ -42,6 +46,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 500px;
 }
 .emails__middle p span {
     font-weight: normal;
@@ -53,4 +58,8 @@
 
 .emails:hover .emails__left svg {
     color:gray;
+}
+.mail_body_wrapper_scroller a {
+    text-decoration: none;
+    color: #000;
 }

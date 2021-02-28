@@ -9,8 +9,11 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
 import '../styles/header.css'
+import { StateContext, useStateValue } from '../context/StateProvider';
 
-const header = ()=> {
+const Header = ()=> {
+    const [{user},dispatch] = useStateValue(StateContext);
+
     return (
         <div className="header">
             <div className="logo__wrapper">
@@ -28,10 +31,10 @@ const header = ()=> {
                 <HelpOutlineIcon/>
                 <SettingsIcon/>
                 <AppsIcon/>
-                <Avatar src={avatar}/>
+                <Avatar src={user.photoURL}/>
             </div>
         </div>
     )
 }
 
-export default header
+export default Header

@@ -5,3 +5,8 @@ body {
     height: 100vh;
     overflow: hidden;
 }
+.content__Wrapper {
+    display: grid;
+    grid-template-columns: 256px auto 50px;
+    padding-top:5px;
+}

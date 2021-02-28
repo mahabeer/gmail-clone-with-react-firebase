@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import  '../styles/sidebar.css'
 import avatar from "../img/avatar.jpg"
 import InboxIcon from '@material-ui/icons/Inbox';
@@ -17,22 +17,37 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import AddIcon from '@material-ui/icons/Add';
 import { Avatar } from '@material-ui/core';
+import Compose from './Compose'
+import { StateContext, useStateValue } from '../context/StateProvider';
+import { actions } from '../context/Reducer';
+import { NavLink } from "react-router-dom"
 
 
+function Sidebar() {
+ const [{user,showcompose}, dispatch] = useStateValue(StateContext);
 
-function sidebar() {
+ const openCompose = ()=> {
+    dispatch({
+         type : actions.SHOW_COMPOSE,
+         showcompose: true,
+     })
+ }
     return (
+        <>
+        {showcompose && 
+          <Compose/>
+         }
         <div className="sidebar">
-            <div className="newmail">
+            <div className="newmail" onClick={e=>openCompose()}>
                 <img src={plusicon}/>
                 <span>Compose</span>
             </div>
 
             <div class="incoming__outgoing">
-                <div className="categories active_category">
+                <NavLink exact={true} to="/" className="categories" activeClassName="active_category">
                     <InboxIcon/>
                     <span>Inbox</span>
-                </div>
+                </NavLink>
 
                 <div className="categories">
                     <WatchLaterIcon/>
@@ -49,10 +64,11 @@ function sidebar() {
                     <span>Important</span>
                 </div>
 
-                <div className="categories">
+                <NavLink to="/sentemail" className="categories" activeClassName="active_category">
                     <SendIcon/>
                     <span>Sent</span>
-                </div>
+                </NavLink>
+               
 
                 <div className="categories">
                     <DraftsIcon/>
@@ -91,8 +107,8 @@ function sidebar() {
                 <h5>Hangouts</h5>
                 <div className="login_user online_user">
                     <div class="user_details">
-                        <Avatar src={avatar}/>
-                        <span>Mahabeer</span>
+                        <Avatar src={user.photoURL}/>
+                        <span>{user.displayName}</span>
                         <ArrowDropDownIcon/>
                     </div>
                     <AddIcon/>
@@ -130,7 +146,8 @@ function sidebar() {
                 
             </div>
         </div>
+    </>
     )
 }
 
-export default sidebar
+export default Sidebar
